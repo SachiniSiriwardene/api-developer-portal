@@ -3,12 +3,6 @@ Install Node.js v22.0.0
 Install POSTGRESQL and create a database named 'devportal'.  
 For more information, refer to docs/InstallationGuide.md.
 
-To create tables for the devportal, execute the relevant script as shown below.
-
-```bash
-psql -U \-d \-f /artifacts/script.sql -W
-```
-
 **Changing the database to PostgreSQL**
 
 1.  Navigate to the config.json file in the <DEVPORTAL_HOME> directory.
@@ -157,7 +151,6 @@ curl --location --request POST 'http://localhost:3000/devportal/organizations/{o
                \\"api-hero\\": \\"api.svg\\"
             }"
 ```
-
 
 Use this (https://devportal-4432.postman.co/workspace/Devportal-Workspace~9221a728-2c4b-46ec-acc3-095b9debacbc/collection/5029047-61d763dc-d7b9-4436-9a2e-94585c806943?action=share&creator=5029047) POSTMAN collection to test the API requests.
 
