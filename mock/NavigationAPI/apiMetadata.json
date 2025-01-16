@@ -35,8 +35,8 @@
       "policyName": "Unlimited"
     }
   ],
-  "serverUrl": {
-    "sandboxUrl": "https://sandbox.acme.com/api/v1/navigation",
-    "productionUrl": "https://api.acme.com/v1/navigation"
+  "endPoints": {
+    "sandboxURL": "https://sandbox.acme.com/api/v1/navigation",
+    "productionURL": "https://api.acme.com/v1/navigation"
   }
 }

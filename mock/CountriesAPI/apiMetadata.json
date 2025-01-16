@@ -35,8 +35,8 @@
       "policyName": "Unlimited"
     }
   ],
-  "serverUrl": {
-    "sandboxUrl": "https://countries.trevorblades.com/graphql",
-    "productionUrl": "https://countries.trevorblades.com/graphql"
+  "endPoints": {
+    "sandboxURL": "https://countries.trevorblades.com/graphql",
+    "productionURL": "https://countries.trevorblades.com/graphql"
   }
 }

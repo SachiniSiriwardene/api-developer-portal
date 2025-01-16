@@ -1,8 +1,10 @@
 <section id="subscriptionPlans" class="api-plans-section">
     <div class="col-11 row align-items-center api-plans-content">
+        {{#if subscriptionPlans.length}}
         <div class="common-header">
             <h2>Available Subscription Plans</h2>
         </div>
+        {{/if}}
         <div class="row card-section">
             {{#each subscriptionPlans}}
             <div class="col-lg-3">

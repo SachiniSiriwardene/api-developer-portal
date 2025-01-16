@@ -32,8 +32,8 @@
       "policyName": "Unlimited"
     }
   ],
-  "serverUrl": {
-    "sandboxUrl": "https://accommodation.api.sandbox.abc.com",
-    "productionUrl": "https://accommodation.api.abc.com"
+  "endPoints": {
+    "sandboxURL": "https://accommodation.api.sandbox.abc.com",
+    "productionURL": "https://accommodation.api.abc.com"
   }
 }
