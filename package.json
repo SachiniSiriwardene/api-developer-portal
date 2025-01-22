@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/api-developer-portal#readme",
   "dependencies": {
-    "devportal-webapp": "^1.0.73"
+    "devportal-webapp": "^1.0.79"
   },
   "bin": {
     "app": "src/app.js"
