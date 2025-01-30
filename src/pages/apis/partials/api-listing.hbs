@@ -10,7 +10,7 @@
         </div>
         <div class="col-lg-12 search-container">
           <div class="search-input">
-            <input type="text" id="query" placeholder="Search APIs" />
+            <input type="text" id="query" />
           </div>
         </div>
       </div>
@@ -43,96 +43,25 @@
             <i class="bi bi-chevron-down"></i>
           </div>
           <hr />
+          {{#tags}}
           <div class="collapse show" id="collapseExplore">
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="checkbox"
                 value=""
-                id="flexCheckDefault"
-              />
-              <label class="form-check-label" for="flexCheckDefault">All</label>
-            </div>
-          </div>
-          <div class="collapse show" id="collapseExplore">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label class="form-check-label" for="flexCheckDefault">Recently
-                Added</label>
-            </div>
-          </div>
-          <div class="collapse show" id="collapseExplore">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
+                id={{lowercase this}}
+                data-tag={{this}}
               />
               <label
                 class="form-check-label"
                 for="flexCheckDefault"
-              >Trending</label>
+              >{{this}}</label>
             </div>
           </div>
+          {{/tags}}
         </div>
-
-        <div class="row list-items api-filter-content">
-          <div class="col-lg filter-sub"> Category </div>
-          <div
-            class="col-lg dropdown"
-            id="categoryFilter"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseCategory"
-            aria-expanded="true"
-            aria-controls="collapseCategory"
-          >
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <hr />
-          <div class="collapse show" id="collapseCategory">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label
-                class="form-check-label"
-                for="flexCheckDefault"
-              >Account</label>
-            </div>
-          </div>
-          <div class="collapse show" id="collapseCategory">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label class="form-check-label" for="flexCheckDefault">AI</label>
-            </div>
-          </div>
-          <div class="collapse show" id="collapseCategory">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label class="form-check-label" for="flexCheckDefault">Business
-                Intelligence</label>
-            </div>
-          </div>
-        </div>
+       <button class="common-btn-outlined" id="filter">Apply</button> 
       </div>
       <div class="col-lg-10">
         <div class="row list-items">
