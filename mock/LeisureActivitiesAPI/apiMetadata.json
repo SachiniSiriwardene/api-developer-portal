@@ -10,7 +10,7 @@
     ],
     "apiDescription": "API for retrieving information about leisure activities and managing reservations",
     "apiVersion": "2.1.0",
-    "apiType": "SOAP",
+    "apiType": "REST",
     "additionalProperties": {
       "documentationUrl": "https://globaldata.com/docs/countries-api"
     },

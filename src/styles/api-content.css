@@ -22,7 +22,6 @@
   border-radius: 0.75rem;
   padding: 1.875rem;
   text-align: left;
-  max-width: 29rem;
   min-height: 15rem;
   flex: 1;
   display: flex;
@@ -344,4 +343,11 @@ hr {
     padding: 0.25rem 1rem;
     font-size: 0.625rem;
   }
+}
+
+.justified-text {
+  text-align: justify;
+  
+  font-size: 16px;
+  line-height: 1.6; /* Improves readability */
 }

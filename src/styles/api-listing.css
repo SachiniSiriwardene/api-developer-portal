@@ -191,6 +191,15 @@ hr {
   margin-bottom: 0.625rem;
 }
 
+.truncate-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  line-clamp: 2; /* Standard property for compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .api-card-title {
   font-size: 1rem;
   color: var(--main-text-color);

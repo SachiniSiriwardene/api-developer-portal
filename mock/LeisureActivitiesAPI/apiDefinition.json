@@ -1,0 +1,191 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Leisure Activities API",
+      "description": "API for managing leisure activities and reservations",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.example.com/v1",
+        "description": "Production server"
+      }
+    ],
+    "paths": {
+      "/reservations": {
+        "post": {
+          "summary": "Create a new accommodation reservation",
+          "description": "Make a reservation for an accommodation",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewReservation"
+                },
+                "examples": {
+                  "example-1": {
+                    "summary": "Standard reservation",
+                    "value": {
+                      "accommodation_id": "acc123",
+                      "guest_name": "Jane Smith",
+                      "check_in_date": "2024-08-01",
+                      "check_out_date": "2024-08-10",
+                      "number_of_guests": 2,
+                      "special_requests": "Late check-in"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Reservation created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Reservation"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        }
+      },
+      "/reservations/{id}": {
+        "put": {
+          "summary": "Update a reservation",
+          "description": "Update details of an existing reservation",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "The ID of the reservation",
+              "example": "res123"
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewReservation"
+                },
+                "examples": {
+                  "example-1": {
+                    "summary": "Update reservation",
+                    "value": {
+                      "accommodation_id": "acc123",
+                      "guest_name": "Jane Smith",
+                      "check_in_date": "2024-08-01",
+                      "check_out_date": "2024-08-10",
+                      "number_of_guests": 2,
+                      "special_requests": "Quiet room"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Reservation updated",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Reservation"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            },
+            "404": {
+              "description": "Reservation not found"
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "NewReservation": {
+          "type": "object",
+          "properties": {
+            "accommodation_id": {
+              "type": "string"
+            },
+            "guest_name": {
+              "type": "string"
+            },
+            "check_in_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "check_out_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "number_of_guests": {
+              "type": "integer"
+            },
+            "special_requests": {
+              "type": "string"
+            }
+          }
+        },
+        "Reservation": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "accommodation_id": {
+              "type": "string"
+            },
+            "guest_name": {
+              "type": "string"
+            },
+            "check_in_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "check_out_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "number_of_guests": {
+              "type": "integer"
+            },
+            "special_requests": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed",
+                "pending",
+                "canceled"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+  

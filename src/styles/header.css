@@ -22,6 +22,11 @@
   color: var(--primary-main-color);
 }
 
+.active {
+  font-weight: bold;
+  color: var(--primary-main-color) !important;
+}
+
 .profile-link {
   color: var(--main-text-color);
 }

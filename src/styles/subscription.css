@@ -9,7 +9,18 @@
 
 .card-section {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+}
+
+.highlight-card {
+  border: 2px solid var(--primary-main-color);
+  transition: all 0.3s ease-in-out;
+  max-width: 380px;
+  background-color: #f2f2f9 !important;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
 }
 
 .custom-plans-card {
