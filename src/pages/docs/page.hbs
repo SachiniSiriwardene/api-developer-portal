@@ -1,0 +1,27 @@
+<main class="main-content">
+    <div class="content">
+        <div class="documents">
+            <aside class="documents-sidebar">
+                <div class="search-box">
+                    <input type="text" placeholder="Search Documents">
+                </div>
+                {{#docTypes}}
+                <div class="doc-section">
+                    <div class="doc-section-title">
+                        {{#if (eq type "Specification")}}
+                            <a href="{{../baseUrl}}/docs/specification" class="doc-spec">{{type}}</a>
+                        {{else}}
+                        {{type}}
+                        {{/if}}
+                    </div>
+                    {{#names}}
+                    <div class="doc-links">
+                        <a href="{{../../baseUrl}}/docs/{{../type}}/{{this}}" class="doc-link">{{this}}</a>
+                    </div>
+                    {{/names}}
+                    {{/docTypes}}
+            </aside>
+            {{> api-doc}}
+        </div>
+    </div>
+</main>

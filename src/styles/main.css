@@ -18,6 +18,7 @@
 @import "/styles/getStarted.css";
 @import "/styles/helpBanner.css";
 @import "/styles/subscription.css";
+@import "/styles/doc.css";
 
 :root {
   --main-bg-color: #ffffff;

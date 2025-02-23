@@ -1,0 +1,67 @@
+<head>
+    <style>
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<div class="container">
+    <h1>Get Started with the Accommodation API</h1>
+    <p>The Accommodation API allows you to search, book, and manage accommodations effortlessly. Follow this guide to
+        integrate the API into your application.</p>
+
+    <h2>1. Prerequisites</h2>
+    <ul>
+        <li>Sign up for an API key from the <a href="#">Developer Portal</a>.</li>
+        <li>Ensure your application can make HTTPS requests.</li>
+        <li>Familiarity with RESTful APIs and JSON format.</li>
+    </ul>
+
+    <h2>2. Authentication</h2>
+    <p>All API requests must include an API key in the request header:</p>
+    <pre><code>Authorization: Bearer YOUR_API_KEY</code></pre>
+
+    <h2>3. Making Your First API Call</h2>
+    <p>To fetch available accommodations, make a GET request to the following endpoint:</p>
+    <pre><code>GET https://api.example.com/accommodations</code></pre>
+    <p>Example Request:</p>
+    <pre><code>
+curl -X GET "https://api.example.com/accommodations" \
+     -H "Authorization: Bearer YOUR_API_KEY" \
+     -H "Content-Type: application/json"
+        </code></pre>
+
+    <h2>4. Response Example</h2>
+    <pre><code>
+{
+    "accommodations": [
+        {
+            "id": "123",
+            "name": "Seaside Hotel",
+            "location": "Miami, FL",
+            "price": "120.00",
+            "currency": "USD"
+        }
+    ]
+}
+        </code></pre>
+
+    <h2>5. Next Steps</h2>
+    <ul>
+        <li>Explore <a href="#">detailed API documentation</a>.</li>
+        <li>Learn how to filter results and book accommodations.</li>
+        <li>Integrate with webhooks for real-time updates.</li>
+    </ul>
+</div>
