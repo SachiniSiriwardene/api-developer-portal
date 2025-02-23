@@ -1,6 +1,7 @@
 {
   "apiInfo": {
     "apiName": "NavigationAPI",
+    "apiHandler": "navigationapiv3.0.1",
     "orgName": "ACME",
     "apiCategory": "Transportation",
     "tags": ["transport", "activities", "reservations"],

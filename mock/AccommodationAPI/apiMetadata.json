@@ -1,6 +1,7 @@
 {
   "apiInfo": {
     "apiName": "AccommodationAPI",
+    "apiHandle": "accommodationapiv1.1.0",
     "orgName": "ACME",
     "apiCategory": "Transportation",
     "tags": [
