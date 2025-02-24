@@ -2,6 +2,7 @@
     {
         "apiInfo": {
             "apiName": "AccommodationAPI",
+            "apiHandle": "AccommodationAPI",
             "apiCategory": "Travel",
             "tags": [
                 "leisure",
@@ -27,6 +28,7 @@
     {
         "apiInfo": {
             "apiName": "CountriesAPI",
+            "apiHandle": "CountriesAPI",
             "orgName": "GlobalData",
             "apiCategory": "Geography",
             "tags": [
@@ -60,6 +62,7 @@
     {
         "apiInfo": {
             "apiName": "NavigationAPI",
+            "apiHandle": "NavigationAPI",
             "orgName": "ACME",
             "apiCategory": "Transportation",
             "tags": [
@@ -92,6 +95,7 @@
     {
         "apiInfo": {
             "apiName": "LeisureActivitiesAPI",
+            "apiHandle": "LeisureActivitiesAPI",
             "apiCategory": "Travel",
             "tags": [
                 "leisure",
